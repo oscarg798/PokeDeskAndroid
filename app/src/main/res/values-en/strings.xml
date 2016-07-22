@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">PokeDesk</string>
+    <string name="pokemon_types_label">Type</string>
+    <string name="pokemon_weight_label">Weigth</string>
+    <string name="pokemon_height_label">Height</string>
+</resources>

@@ -1,6 +1,7 @@
 package com.core.model.builders;
 
 import com.core.model.dto.PokemonDTO;
+import com.core.model.dto.PokemonEvolutionDTO;
 import com.core.model.dto.PokemonTypeDTO;
 
 import java.util.List;
@@ -16,7 +17,17 @@ public class PokemonDTOBuilder {
 
     private List<String> anAttacks;
 
+    private  String aHeight;
+
+    private  String aWeight;
+
     private String anImage;
+
+    private  String aNumber;
+
+    private  List<String> aWeaknessesList;
+
+    private  List<PokemonEvolutionDTO> aPokemonEvolutionDTOList;
 
 
     public PokemonDTOBuilder() {
@@ -43,7 +54,36 @@ public class PokemonDTOBuilder {
         return this;
     }
 
+    public PokemonDTOBuilder withAHeight(String aHeight){
+        this.aHeight = aHeight;
+        return this;
+    }
+
+    public PokemonDTOBuilder withAWeight(String aWeight){
+        this.aWeight = aWeight;
+        return this;
+    }
+
+    public PokemonDTOBuilder withANumber(String aNumber){
+        this.aNumber = aNumber;
+        return this;
+    }
+
+    public PokemonDTOBuilder withAWeaknessesList(List<String> aWeaknessesList){
+        this.aWeaknessesList = aWeaknessesList;
+        return  this;
+    }
+
+    public PokemonDTOBuilder withAPokemonEvolutionDTOList(List<PokemonEvolutionDTO> aPokemonEvolutionDTOList){
+        this.aPokemonEvolutionDTOList = aPokemonEvolutionDTOList;
+        return  this;
+    }
+
+
+
     public PokemonDTO createPokemonDTO(){
-        return new PokemonDTO(this.aName, this.aPokemonTypeDTO, this.anAttacks, this.anImage);
+        return new PokemonDTO(this.aName, this.aPokemonTypeDTO, this.anAttacks,
+                this.anImage, this.aNumber, this.aHeight, this.aWeight,
+                this.aWeaknessesList, this.aPokemonEvolutionDTOList);
     }
 }

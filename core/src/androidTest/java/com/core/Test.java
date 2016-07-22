@@ -16,21 +16,6 @@ import static junit.framework.Assert.assertEquals;
 
 public class Test {
 
-    @SmallTest
-    public void shouldCreateAPokemonDTO(){
-        List<String> attacks =  new ArrayList<>();
-        attacks.add("Thunder");
-        PokemonTypeDTO pokemonTypeDTO =  new PokemonTypeDTO("Electric", null);
-        PokemonDTO pokemonDTO = new PokemonDTO("Pika", pokemonTypeDTO, attacks);
 
-        PokemonDTO pokemonDTO1 = new PokemonDTOBuilder()
-                .withAName("Pika")
-                .withAnAttacks(attacks)
-                .withAPokemonTypeDTO(pokemonTypeDTO)
-                .createPokemonDTO();
-
-        assertEquals(pokemonDTO, pokemonDTO1);
-
-    }
 
 }

@@ -82,6 +82,14 @@ public class Pokemon {
                 pokemonBuilder.withAnImage(jsonObject.getString("image"));
             }
 
+            if (Utils.jsonHasProperty(jsonObject.names(), "height")) {
+                pokemonBuilder.withAHeight(jsonObject.getString("height"));
+            }
+
+            if (Utils.jsonHasProperty(jsonObject.names(), "weight")) {
+                pokemonBuilder.withAWeight(jsonObject.getString("weight"));
+            }
+
             pokemon = pokemonBuilder.createPokemonDTO();
 
         } catch (JSONException e) {

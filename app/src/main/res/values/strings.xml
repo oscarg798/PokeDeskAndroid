@@ -1,3 +1,11 @@
 <resources>
-    <string name="app_name">PokeDesk</string>
+    <string name="app_name" translatable="false">PokeDesk</string>
+    <string name="title_activity_pokemon_detail" translatable="false">PokemonDetailActivity</string>
+
+    <string name="pokemon_types_label">Tipo</string>
+    <!--Keys-->
+    <string name="pokemon_key" translatable="false">pokemon</string>
+    <string name="pokemon_weight_label">Peso</string>
+    <string name="pokemon_height_label">Altura</string>
+    <!--Keys END-->
 </resources>

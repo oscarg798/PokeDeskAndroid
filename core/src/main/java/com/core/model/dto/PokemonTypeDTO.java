@@ -1,9 +1,11 @@
 package com.core.model.dto;
 
+import java.io.Serializable;
+
 /**
  * Created by Stephys on 13/07/16.
  */
-public class PokemonTypeDTO {
+public class PokemonTypeDTO implements Serializable{
 
 
     private final String name;
