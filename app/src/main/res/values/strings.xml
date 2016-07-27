@@ -2,10 +2,29 @@
     <string name="app_name" translatable="false">PokeDesk</string>
     <string name="title_activity_pokemon_detail" translatable="false">PokemonDetailActivity</string>
 
+    <string name="gcm_sender_id" translatable="false">234434476261</string>
     <string name="pokemon_types_label">Tipo</string>
+
+
+    <string name="username_label">Username</string>
+    <string name="password_label">Password</string>
+    <string name="socket_general_error">There was an error establishing connection, try again later</string>
+
+    <string name="alert_label">Alert</string>
+    <string name="connecting_message">Establishing connection</string>
+    <string name="login_into_pokemon_message">Login in to pokemon account</string>
+    <string name="getting_location_message">Getting your location</string>
     <!--Keys-->
     <string name="pokemon_key" translatable="false">pokemon</string>
     <string name="pokemon_weight_label">Peso</string>
     <string name="pokemon_height_label">Altura</string>
+    <string name="title_activity_map" translatable="false">MapActivity</string>
+    <string name="title_activity_login" translatable="false">LoginActivity</string>
     <!--Keys END-->
+
+    <!--URL-->
+    <string name="base_url" translatable="false">http://159.203.236.220:1337</string>
+    <string name="login_url" translatable="false">/getAccessToken</string>
+    <string name="get_nearby_pokemons_url" translatable="false">/pokemon/getNearbyPokemonsWithToken</string>
+    <!--URL END-->
 </resources>

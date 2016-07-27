@@ -26,7 +26,7 @@ public class PokemonActivityController extends AbstractController {
 
     public void getPokemons() {
         page += 1;
-        Pokemon.getInstance().getPokemons(page, limit, "http://192.168.1.52:1337/pokemon",
+        Pokemon.getInstance().getPokemons(page, limit, "http://159.203.236.220:1337",
                 new PokemonCallbacks.GetPokemonsCallback() {
                     @Override
                     public void onPokemonsGot(List<PokemonDTO> pokemonDTOList) {

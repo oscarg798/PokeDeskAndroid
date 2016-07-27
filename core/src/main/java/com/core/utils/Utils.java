@@ -10,6 +10,7 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.Uri;
 import android.util.Base64;
+import android.util.Log;
 import android.view.View;
 
 import com.core.model.utils.CoupleParams;
@@ -297,6 +298,8 @@ public class Utils {
         if(unit.equals(KILOMETERS)){
             return dist/1000;
         }
+
+
         return dist;
     }
 

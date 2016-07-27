@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "234434476261",
+    "project_id": "idyllic-parser-138223"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:234434476261:android:fe412eaa38ec9090",
+        "android_client_info": {
+          "package_name": "com.pokedesk"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "234434476261-67cpcjh4jvfqtjdq2q02upd5pen5imr7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.pokedesk",
+            "certificate_hash": "1B57566EE3918E0389311A682D47974D103C9DBF"
+          }
+        },
+        {
+          "client_id": "234434476261-305cm8q7tpov0a5ahfgrf4f7uc02450t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCUdZP3nb-lJBwHKb8rWMj6RVaQTo00Nug"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_login"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical"
+    android:padding="10dp"
+    tools:context="com.pokedesk.presentation.activities.LoginActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_gravity="center_vertical"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/et_username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:ems="10"
+            android:gravity="start"
+            android:hint="@string/username_label"
+            app:theme="@style/editTextBottomLines"
+            android:inputType="textPersonName"
+            android:textColor="@color/white"
+            android:textColorHint="@color/colorLightPrimary" />
+
+        <EditText
+            android:id="@+id/et_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:ems="10"
+            app:theme="@style/editTextBottomLines"
+            android:gravity="start"
+            android:hint="@string/password_label"
+            android:inputType="textPassword"
+            android:textColor="@color/white"
+            android:textColorHint="@color/colorLightPrimary" />
+
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/button_stroke"
+            android:text="Login"
+            android:textColor="@color/white"
+            tools:layout_editor_absoluteX="148dp"
+            tools:layout_editor_absoluteY="465dp" />
+
+
+
+
+    </LinearLayout>
+</ScrollView>

@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">PokeDesk</string>
     <string name="pokemon_types_label">Type</string>
     <string name="pokemon_weight_label">Weigth</string>
     <string name="pokemon_height_label">Height</string>
+    <string name="alert_label">Alerta</string>
+    <string name="connecting_message">Estableciendo Conexión</string>
+    <string name="getting_location_message">Obteniendo tu posición</string>
+    <string name="login_into_pokemon_message">Iniciando tu cuenta pokemon</string>
+    <string name="socket_general_error">Hubo un error en la conexión, intenta mas tarde</string>
+    <string name="username_label">Nombre de Usuario</string>
+    <string name="password_label">Contraseña</string>
 </resources>

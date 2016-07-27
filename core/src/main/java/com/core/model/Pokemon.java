@@ -1,5 +1,8 @@
 package com.core.model;
 
+import android.content.Context;
+import android.util.Log;
+
 import com.core.model.builders.PokemonDTOBuilder;
 import com.core.model.builders.PokemonTypeDTOBuilder;
 import com.core.model.dto.PokemonDTO;
@@ -147,6 +150,77 @@ public class Pokemon {
         }
 
     }
+
+    private IHTTPServices getPokemonsResponse = new IHTTPServices() {
+        @Override
+        public void successFullResponse(String response)
+        {
+            Log.i("ok", response);
+        }
+
+        @Override
+        public void errorResponse(String message) {
+            Log.i("ok", message);
+        }
+    };
+
+
+    public void getPokemonsNearby(String id,  String token, double lat, double lng, String url) {
+        List<CoupleParams> coupleParamsList = new ArrayList<>();
+        coupleParamsList.add(new CoupleParams
+                .CoupleParamBuilder("id")
+                .nestedParam(id)
+                .createCoupleParam());
+
+        coupleParamsList.add(new CoupleParams
+                .CoupleParamBuilder("token")
+                .nestedParam(token)
+                .createCoupleParam());
+        coupleParamsList.add(new CoupleParams
+                .CoupleParamBuilder("lng")
+                .nestedParam(Double.toString(lng))
+                .createCoupleParam());
+        coupleParamsList.add(new CoupleParams
+                .CoupleParamBuilder("lat")
+                .nestedParam(Double.toString(lat))
+                .createCoupleParam());
+
+        HTTPServices httpServices = new HTTPServices(getPokemonsResponse,
+                coupleParamsList, "POST", false);
+
+        httpServices.execute(url);
+    }
+
+    public void getPokemonsNearby(String id, String username, String password, double lat, double lng) {
+
+        List<CoupleParams> coupleParamsList = new ArrayList<>();
+        coupleParamsList.add(new CoupleParams
+                .CoupleParamBuilder("id")
+                .nestedParam(id)
+                .createCoupleParam());
+        coupleParamsList.add(new CoupleParams
+                .CoupleParamBuilder("username")
+                .nestedParam(username)
+                .createCoupleParam());
+        coupleParamsList.add(new CoupleParams
+                .CoupleParamBuilder("password")
+                .nestedParam(password)
+                .createCoupleParam());
+        coupleParamsList.add(new CoupleParams
+                .CoupleParamBuilder("lng")
+                .nestedParam(Double.toString(lng))
+                .createCoupleParam());
+        coupleParamsList.add(new CoupleParams
+                .CoupleParamBuilder("lat")
+                .nestedParam(Double.toString(lat))
+                .createCoupleParam());
+
+        HTTPServices httpServices = new HTTPServices(getPokemonsResponse,
+                coupleParamsList, "POST", false);
+
+        httpServices.execute("http://159.203.236.220:1337/pokemon/getNearbyPokemons");
+    }
+
 
     public void getPokemons(int pagination, int limit, String url,
                             final PokemonCallbacks.GetPokemonsCallback getPokemonsCallback) {
